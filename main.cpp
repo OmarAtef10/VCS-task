@@ -13,6 +13,17 @@ int get_sum(vector<int> &nums) {
     return sum;
 }
 
+int get_min(vector<int> &nums) {
+    int min = nums[0];
+    vector<int>::iterator i;
+    for (i = nums.begin(); i < nums.end(); i++) {
+        if (*i < min) {
+            min = *i;
+        }
+    }
+    return min;
+}
+
 int get_average(vector<int> &nums) {
     int sum = get_sum(nums);
     return sum / nums.size();
@@ -25,5 +36,6 @@ int main() {
     int average = get_average(nums);
     cout << "Sum of Vector is " << sum << endl;
     cout << "Average of Vector is " << average << endl;
+    cout<< "Min of Vector is " << get_min(nums) << endl;
     return 0;
 }
