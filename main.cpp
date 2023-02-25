@@ -28,6 +28,18 @@ int get_average(vector<int> &nums) {
     int sum = get_sum(nums);
     return sum / nums.size();
 }
+//function that print pyramid
+void print_pyramid(int n) {
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n - i; j++) {
+            cout << " ";
+        }
+        for (int k = 0; k < i + 1; k++) {
+            cout << "* ";
+        }
+        cout << endl;
+    }
+}
 
 int main() {
     std::cout << "Hello, World!" << std::endl;
